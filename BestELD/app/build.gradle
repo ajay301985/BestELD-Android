@@ -1,0 +1,122 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.eld.besteld"
+        minSdkVersion 26
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += [
+                        "room.schemaLocation"  : "$projectDir/schemas".toString(),
+                        "room.incremental"     : "true",
+                        "room.expandProjection": "true"]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'META-INF/atomicfu.kotlin_module'
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.4.21"
+    //kotlin library
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.21-2"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.fragment:fragment-ktx:1.2.5'
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+
+    //ssp and sdp depencdecy for font and textsize good resolution
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    //eld dependency
+    implementation 'no.nordicsemi.android.support.v18:scanner:1.4.2'
+    implementation project(':EldBleLib-release')
+
+    //circular image view dependency
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //Gson converter
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    //Moshi converter
+    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+
+    //kotlin serilagation convertor
+    implementation 'com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.7.0'
+
+    //jackson converter
+    implementation 'com.squareup.retrofit2:converter-jackson:2.9.0'
+    //Login interceptor
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.0")
+    //room database
+    // Room components
+    implementation "androidx.room:room-runtime:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
+    implementation 'androidx.room:room-ktx:2.2.1'
+    kapt "androidx.room:room-compiler:2.2.1"
+
+    androidTestImplementation "androidx.room:room-testing:$roomVersion"
+
+    //for database debugging
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
+    //location dependency
+    implementation 'com.google.android.gms:play-services-location:17.1.0'
+
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    // For control over item selection of both touch and mouse driven selection
+    implementation "androidx.recyclerview:recyclerview-selection:1.1.0"
+    // custome radio button
+    implementation 'com.github.aagitoEx:imageradiobutton:1.0'
+
+    //db check
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
+
+    //swap to refresh
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+
+    implementation 'com.jjoe64:graphview:4.2.2'
+
+}

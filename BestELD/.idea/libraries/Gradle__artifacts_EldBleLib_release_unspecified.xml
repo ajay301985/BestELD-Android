@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: artifacts:EldBleLib-release:unspecified">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/EldBleLib-release/build/.transforms/f803f4673a103cd9e91a837e040973bd/jetified-EldBleLib-release/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/EldBleLib-release/build/.transforms/f803f4673a103cd9e91a837e040973bd/jetified-EldBleLib-release/res" />
+      <root url="file://$PROJECT_DIR$/EldBleLib-release/build/.transforms/f803f4673a103cd9e91a837e040973bd/jetified-EldBleLib-release/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

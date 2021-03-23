@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.aagitoEx:imageradiobutton:1.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/de78c91f50721a933fbcced522e5c0c3/jetified-imageradiobutton-1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/de78c91f50721a933fbcced522e5c0c3/jetified-imageradiobutton-1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/de78c91f50721a933fbcced522e5c0c3/jetified-imageradiobutton-1.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.aagitoEx/imageradiobutton/1.0/4a5a55444a6f08d54b3bc861b212e450fa9f7a04/imageradiobutton-1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.aagitoEx/imageradiobutton/1.0/c8ceab60337aac9e05dacea0c7cbe0f99282979/imageradiobutton-1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

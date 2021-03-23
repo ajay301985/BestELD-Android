@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_160sdp">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Off"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="@dimen/_8ssp"
+                android:layout_marginTop="40dp"
+                android:textColor="@android:color/black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SP"
+                android:layout_marginTop="24dp"
+                android:textSize="@dimen/_8ssp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@android:color/black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="D"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:textSize="@dimen/_8ssp"
+                android:textColor="@android:color/black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ND"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="26dp"
+                android:textSize="@dimen/_8ssp"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+        <com.eld.besteld.paint.DrawView
+            android:id="@+id/graph"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_160sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:background="@drawable/graph_one"
+            android:text="@string/hello_blank_fragment" />
+    </LinearLayout>
+
+
+</FrameLayout>

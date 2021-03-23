@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <include android:id="@+id/toolbar"
+        layout="@layout/custom_toolbar"/>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/toolbar">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@+id/containerGraph"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_160sdp">
+
+            </FrameLayout>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/rlSelectDay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_46sdp"
+                android:elevation="@dimen/_10sdp"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_below="@id/containerGraph">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivDown"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/down_arrow"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_14ssp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/ivDown"
+                    android:gravity="center"
+                    android:text="Today"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/warning"
+                    android:layout_toLeftOf="@+id/plus"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_centerInParent="true"/>
+                <ImageView
+                    android:id="@+id/plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@mipmap/plus"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <FrameLayout
+                android:id="@+id/listContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rlSelectDay"/>
+        </RelativeLayout>
+    <com.eld.besteld.utils.DualProgressView
+        android:id="@+id/progressbar"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
+</FrameLayout>
+</RelativeLayout>

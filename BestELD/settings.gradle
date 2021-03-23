@@ -1,0 +1,3 @@
+include ':EldBleLib-release'
+include ':app'
+rootProject.name = "BestELD"
